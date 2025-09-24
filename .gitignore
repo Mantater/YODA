@@ -1,0 +1,7 @@
+youtube_data/
+
+__pycache__/
+
+*.env
+
+tempCodeRunnerFile.py
