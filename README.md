@@ -1,4 +1,4 @@
-# Project Title: YODA - Youtube Ordinary Data Analyzer
+# YODA - Youtube Ordinary Data Analyzer
 
 ## Description
 YODA is a desktop application that analyzes your YouTube watch and search history. It provides insights into your viewing habits, trends, and category preferences through interactive visualizations. The app integrates PyQt6 for a desktop interface and Dash/Plotly for data visualization.
