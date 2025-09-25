@@ -13,12 +13,12 @@ git clone https://github.com/Mantater/YODA
 cd https://github.com/Mantater/YODA/yoda_app
 pip install -r requirements.txt
 ```
-3. Set up API key:
+3. Set up API key
 - Create a `.env` file in the `api_keys` folder:
 ```sh
 YT_API_KEY=your_youtube_api_key_here
 ```
-4. Run the application:
+4. Run the application
 ```sh
 python App.py
 ```
