@@ -51,7 +51,7 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 - Export your YouTube data from Google Takeout:
     1. Find and select "YouTube and YouTube Music"
     2. Click on "Multiple Formats"
-    3. Find "history" and select JSON as export format
+    3. Find "history" and select `JSON` as export format
     4. Click OK
     5. Click "All YouTube data included" → only select history → next step → download the files
 - Create a Google API key with Google Cloud. For more info, visit YouTube Data API Python Quickstart.
