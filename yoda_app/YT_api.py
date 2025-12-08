@@ -1,10 +1,16 @@
 from googleapiclient.discovery import build
+from googleapiclient.discovery_cache.base import Cache
 from tqdm import tqdm
 import pandas as pd
 
 class YouTubeAPI:
     def __init__(self, api_key):
-        self.youtube = build("youtube", "v3", developerKey=api_key)
+        print(api_key)
+        self.youtube = build(
+            "youtube", 
+            "v3", 
+            developerKey=api_key
+        )
 
     def get_category_mapping(self, region="US"):
         response = self.youtube.videoCategories().list(part="snippet", regionCode=region).execute()

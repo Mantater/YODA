@@ -96,6 +96,9 @@ class DashboardWidget(QWidget):
             return html.Div([title_div, body_message])
 
         return html.Div([
+            # Auto-refresh interval (every 5 seconds)
+            dcc.Interval(id='interval-component', interval=5000, n_intervals=0),
+
             # Title
             html.Div([html.H1("YODA Dashboard", style={
                 'color': 'white',
@@ -180,13 +183,14 @@ class DashboardWidget(QWidget):
             Output('fig-weekly', 'figure'),
             Output('fig-cat-time', 'figure'),
             Output('fig-corr', 'figure'),
+            Input('interval-component', 'n_intervals'),
             Input('date-picker', 'start_date'),
             Input('date-picker', 'end_date'),
             Input('channel-dropdown', 'value'),
             Input('category-dropdown', 'value')
         )
 
-        def update_charts(start_date, end_date, selected_channel, selected_category):
+        def update_charts(n_intervals, start_date, end_date, selected_channel, selected_category):
             # Reload data from DB
             self.load_data()
 
